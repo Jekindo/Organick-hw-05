@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Organick ДЗ-3</title>
+    <title>Organick ДЗ-5</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,12 +36,12 @@
         </nav>
 
         <button class="cart-button" type="button">
-          <span class="icon-thumb">
+          <span class="cart-button-circle">
             <svg class="icon" width="28" height="26">
               <use href="./images/icons/sprite.svg#icon-cart"></use>
             </svg>
           </span>
-          Cart (0)
+          <span class="cart-button-text">Cart (0)</span>
         </button>
       </div>
     </header>
@@ -51,15 +51,19 @@
       <section class="hero">
         <div class="container hero-inner">
           <div class="content">
-            <h1 class="hero-title">100% Natural Food</h1>
+            <h1 class="hero-title">
+              <span data-value="100%">100%</span>
+              Natural Food
+            </h1>
             <p class="hero-description">
               Choose the best healthier way <br />
               of life
             </p>
+
             <a class="button secondary" href="">
-              Explore Now
-              <span class="icon-thumb">
-                <svg class="icon" width="10" height="9">
+              <span class="button-text">Explore Now</span>
+              <span class="button-circle">
+                <svg class="icon">
                   <use href="./images/icons/sprite.svg#icon-arrow-right"></use>
                 </svg>
               </span>
@@ -75,7 +79,7 @@
       </section>
 
       <!--* Offer Banner -->
-      <section class="section">
+      <section class="section smaller-padding">
         <div class="container">
           <h2 class="section-title visually-hidden">Offer banners</h2>
           <ul class="banner-list">
@@ -126,8 +130,8 @@
             <ul class="features">
               <li class="features-item">
                 <span class="icon-thumb">
-                  <svg class="icon" width="24" height="24">
-                    <use href="./images//icons/sprite.svg#icon-ellipse"></use>
+                  <svg class="icon" width="61" height="49">
+                    <use href="./images//icons/sprite.svg#icon-two-leafs"></use>
                   </svg>
                 </span>
                 <div class="content">
@@ -140,8 +144,8 @@
               </li>
               <li class="features-item">
                 <span class="icon-thumb">
-                  <svg class="icon" width="24" height="24">
-                    <use href="./images//icons/sprite.svg#icon-ellipse"></use>
+                  <svg class="icon" width="64" height="52">
+                    <use href="./images//icons/sprite.svg#icon-quality"></use>
                   </svg>
                 </span>
                 <div class="content">
@@ -154,9 +158,9 @@
               </li>
             </ul>
             <a class="button primary" href="">
-              Shop Now
-              <span class="icon-thumb">
-                <svg class="icon" width="10" height="9">
+              <span class="button-text">Shop Now</span>
+              <span class="button-circle">
+                <svg class="icon">
                   <use href="./images/icons/sprite.svg#icon-arrow-right"></use>
                 </svg>
               </span>
@@ -175,18 +179,33 @@
             <li class="products-item">
               <article class="product-card">
                 <div class="thumb">
-                  <div class="tags">
-                    <p class="tag">Vegetable</p>
-                  </div>
                   <a href="">
                     <img
                       class="image"
-                      src="./images/shop/products/broccoli.png"
+                      src="./images/shop/products/brocolli.png"
                       alt="Calabrese Broccoli"
                       width="330"
                     />
                   </a>
+
+                  <div class="tags">
+                    <p class="tag">Vegetable</p>
+                  </div>
+
+                  <div class="product-actions">
+                    <button class="item" aria-label="Add to favorites">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <button class="item" aria-label="add to cart">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
+
                 <div class="content">
                   <a href="" class="link">
                     <h3 class="heading">Calabrese Broccoli</h3>
@@ -195,33 +214,69 @@
                     <p class="old-price">$20.00</p>
                     <p class="price">$13.00</p>
 
-                    <div class="rating">
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                    </div>
+                    <a href="" class="rating link">
+                      <div class="rating-stars">
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-half"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-empty"
+                          ></use>
+                        </svg>
+                      </div>
+
+                      <span class="rating-quantity">10 reviews</span>
+                    </a>
+                  </div>
+
+                  <div class="hidden-content">
+                    <ul class="sticker-list">
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-organic-product-tag.jpg"
+                          alt="Sticker Healthy Organic Product"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/organic-product-vegetables.JPG"
+                          alt="Sticker Organic Product Vegetables"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-food-broccoli.JPG"
+                          alt="Sticker Organic Broccoli"
+                        />
+                      </li>
+                    </ul>
+                    <p class="product-description">
+                      Simply dummy text of the printing and typesetting
+                      industry. Lorem had ceased to been the industry's standard
+                      dummy text ever since the 1500s, when an unknown printer
+                      took a galley.
+                    </p>
                   </div>
                 </div>
               </article>
@@ -229,177 +284,33 @@
             <li class="products-item">
               <article class="product-card">
                 <div class="thumb">
-                  <div class="tags">
-                    <p class="tag">Fresh</p>
-                  </div>
                   <a href="">
                     <img
                       class="image"
                       src="./images/shop/products/banana.png"
-                      alt="Fresh Banana"
-                      width="330"
-                    />
-                  </a>
-                </div>
-                <div class="content">
-                  <a href="" class="link">
-                    <h3 class="heading">Fresh Banana Fruites</h3>
-                  </a>
-                  <div class="meta">
-                    <p class="old-price">$20.00</p>
-                    <p class="price">$14.00</p>
-                    <div class="rating">
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="products-item">
-              <article class="product-card">
-                <div class="thumb">
-                  <div class="tags">
-                    <p class="tag">Millets</p>
-                  </div>
-                  <a href="">
-                    <img
-                      class="image"
-                      src="./images/shop/products/nuts.png"
-                      alt="Plate with white nuts"
-                      width="330"
-                    />
-                  </a>
-                </div>
-                <div class="content">
-                  <a href="" class="link">
-                    <h3 class="heading">White Nuts</h3>
-                  </a>
-                  <div class="meta">
-                    <p class="old-price">$20.00</p>
-                    <p class="price">$13.00</p>
-                    <div class="rating">
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="products-item">
-              <article class="product-card">
-                <div class="thumb">
-                  <div class="tags">
-                    <p class="tag">Vegetable</p>
-                  </div>
-                  <a href="">
-                    <img
-                      class="image"
-                      src="./images/shop/products/red-tomato.png"
-                      alt="Vegan Red Tomato"
-                      width="330"
-                    />
-                  </a>
-                </div>
-                <div class="content">
-                  <a href="" class="link">
-                    <h3 class="heading">Vegan Red Tomato</h3>
-                  </a>
-                  <div class="meta">
-                    <p class="old-price">$20.00</p>
-                    <p class="price">$17.00</p>
-                    <div class="rating">
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="products-item">
-              <article class="product-card">
-                <div class="thumb">
-                  <div class="tags">
-                    <p class="tag">Vegetable</p>
-                  </div>
-                  <a href="">
-                    <img
-                      class="image"
-                      src="./images/shop/products/broccoli.png"
                       alt="Calabrese Broccoli"
                       width="330"
                     />
                   </a>
+
+                  <div class="tags">
+                    <p class="tag">Vegetable</p>
+                  </div>
+
+                  <div class="product-actions">
+                    <button class="item" aria-label="Add to favorites">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <button class="item" aria-label="add to cart">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
+
                 <div class="content">
                   <a href="" class="link">
                     <h3 class="heading">Calabrese Broccoli</h3>
@@ -407,33 +318,70 @@
                   <div class="meta">
                     <p class="old-price">$20.00</p>
                     <p class="price">$13.00</p>
-                    <div class="rating">
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                    </div>
+
+                    <a href="" class="rating link">
+                      <div class="rating-stars">
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-half"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-empty"
+                          ></use>
+                        </svg>
+                      </div>
+
+                      <span class="rating-quantity">10 reviews</span>
+                    </a>
+                  </div>
+
+                  <div class="hidden-content">
+                    <ul class="sticker-list">
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-organic-product-tag.jpg"
+                          alt="Sticker Healthy Organic Product"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/organic-product-vegetables.JPG"
+                          alt="Sticker Organic Product Vegetables"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-food-broccoli.JPG"
+                          alt="Sticker Organic Broccoli"
+                        />
+                      </li>
+                    </ul>
+                    <p class="product-description">
+                      Simply dummy text of the printing and typesetting
+                      industry. Lorem had ceased to been the industry's standard
+                      dummy text ever since the 1500s, when an unknown printer
+                      took a galley.
+                    </p>
                   </div>
                 </div>
               </article>
@@ -441,105 +389,104 @@
             <li class="products-item">
               <article class="product-card">
                 <div class="thumb">
-                  <div class="tags">
-                    <p class="tag">Fresh</p>
-                  </div>
                   <a href="">
                     <img
                       class="image"
-                      src="./images/shop/products/banana.png"
-                      alt="Fresh Banana"
+                      src="./images/shop/products/brocolli.png"
+                      alt="Calabrese Broccoli"
                       width="330"
                     />
                   </a>
-                </div>
-                <div class="content">
-                  <a href="" class="link">
-                    <h3 class="heading">Fresh Banana Fruites</h3>
-                  </a>
-                  <div class="meta">
-                    <p class="old-price">$20.00</p>
-                    <p class="price">$14.00</p>
-                    <div class="rating">
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="products-item">
-              <article class="product-card">
-                <div class="thumb">
+
                   <div class="tags">
-                    <p class="tag">Millets</p>
+                    <p class="tag">Vegetable</p>
                   </div>
-                  <a href="">
-                    <img
-                      class="image"
-                      src="./images/shop/products/nuts.png"
-                      alt="Plate with white nuts"
-                      width="330"
-                    />
-                  </a>
+
+                  <div class="product-actions">
+                    <button class="item" aria-label="Add to favorites">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <button class="item" aria-label="add to cart">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
+
                 <div class="content">
                   <a href="" class="link">
-                    <h3 class="heading">White Nuts</h3>
+                    <h3 class="heading">Calabrese Broccoli</h3>
                   </a>
                   <div class="meta">
                     <p class="old-price">$20.00</p>
                     <p class="price">$13.00</p>
-                    <div class="rating">
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                    </div>
+
+                    <a href="" class="rating link">
+                      <div class="rating-stars">
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-half"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-empty"
+                          ></use>
+                        </svg>
+                      </div>
+
+                      <span class="rating-quantity">10 reviews</span>
+                    </a>
+                  </div>
+
+                  <div class="hidden-content">
+                    <ul class="sticker-list">
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-organic-product-tag.jpg"
+                          alt="Sticker Healthy Organic Product"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/organic-product-vegetables.JPG"
+                          alt="Sticker Organic Product Vegetables"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-food-broccoli.JPG"
+                          alt="Sticker Organic Broccoli"
+                        />
+                      </li>
+                    </ul>
+                    <p class="product-description">
+                      Simply dummy text of the printing and typesetting
+                      industry. Lorem had ceased to been the industry's standard
+                      dummy text ever since the 1500s, when an unknown printer
+                      took a galley.
+                    </p>
                   </div>
                 </div>
               </article>
@@ -547,52 +494,524 @@
             <li class="products-item">
               <article class="product-card">
                 <div class="thumb">
-                  <div class="tags">
-                    <p class="tag">Vegetable</p>
-                  </div>
                   <a href="">
                     <img
                       class="image"
-                      src="./images/shop/products/red-tomato.png"
-                      alt="Vegan Red Tomato"
+                      src="./images/shop/products/brocolli.png"
+                      alt="Calabrese Broccoli"
                       width="330"
                     />
                   </a>
+
+                  <div class="tags">
+                    <p class="tag">Vegetable</p>
+                  </div>
+
+                  <div class="product-actions">
+                    <button class="item" aria-label="Add to favorites">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <button class="item" aria-label="add to cart">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
+
                 <div class="content">
                   <a href="" class="link">
-                    <h3 class="heading">Vegan Red Tomato</h3>
+                    <h3 class="heading">Calabrese Broccoli</h3>
                   </a>
                   <div class="meta">
                     <p class="old-price">$20.00</p>
-                    <p class="price">$17.00</p>
-                    <div class="rating">
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                    </div>
+                    <p class="price">$13.00</p>
+
+                    <a href="" class="rating link">
+                      <div class="rating-stars">
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-half"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-empty"
+                          ></use>
+                        </svg>
+                      </div>
+
+                      <span class="rating-quantity">10 reviews</span>
+                    </a>
+                  </div>
+
+                  <div class="hidden-content">
+                    <ul class="sticker-list">
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-organic-product-tag.jpg"
+                          alt="Sticker Healthy Organic Product"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/organic-product-vegetables.JPG"
+                          alt="Sticker Organic Product Vegetables"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-food-broccoli.JPG"
+                          alt="Sticker Organic Broccoli"
+                        />
+                      </li>
+                    </ul>
+                    <p class="product-description">
+                      Simply dummy text of the printing and typesetting
+                      industry. Lorem had ceased to been the industry's standard
+                      dummy text ever since the 1500s, when an unknown printer
+                      took a galley.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="products-item">
+              <article class="product-card">
+                <div class="thumb">
+                  <a href="">
+                    <img
+                      class="image"
+                      src="./images/shop/products/brocolli.png"
+                      alt="Calabrese Broccoli"
+                      width="330"
+                    />
+                  </a>
+
+                  <div class="tags">
+                    <p class="tag">Vegetable</p>
+                  </div>
+
+                  <div class="product-actions">
+                    <button class="item" aria-label="Add to favorites">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <button class="item" aria-label="add to cart">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="content">
+                  <a href="" class="link">
+                    <h3 class="heading">Calabrese Broccoli</h3>
+                  </a>
+                  <div class="meta">
+                    <p class="old-price">$20.00</p>
+                    <p class="price">$13.00</p>
+
+                    <a href="" class="rating link">
+                      <div class="rating-stars">
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-half"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-empty"
+                          ></use>
+                        </svg>
+                      </div>
+
+                      <span class="rating-quantity">10 reviews</span>
+                    </a>
+                  </div>
+
+                  <div class="hidden-content">
+                    <ul class="sticker-list">
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-organic-product-tag.jpg"
+                          alt="Sticker Healthy Organic Product"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/organic-product-vegetables.JPG"
+                          alt="Sticker Organic Product Vegetables"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-food-broccoli.JPG"
+                          alt="Sticker Organic Broccoli"
+                        />
+                      </li>
+                    </ul>
+                    <p class="product-description">
+                      Simply dummy text of the printing and typesetting
+                      industry. Lorem had ceased to been the industry's standard
+                      dummy text ever since the 1500s, when an unknown printer
+                      took a galley.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="products-item">
+              <article class="product-card">
+                <div class="thumb">
+                  <a href="">
+                    <img
+                      class="image"
+                      src="./images/shop/products/brocolli.png"
+                      alt="Calabrese Broccoli"
+                      width="330"
+                    />
+                  </a>
+
+                  <div class="tags">
+                    <p class="tag">Vegetable</p>
+                  </div>
+
+                  <div class="product-actions">
+                    <button class="item" aria-label="Add to favorites">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <button class="item" aria-label="add to cart">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="content">
+                  <a href="" class="link">
+                    <h3 class="heading">Calabrese Broccoli</h3>
+                  </a>
+                  <div class="meta">
+                    <p class="old-price">$20.00</p>
+                    <p class="price">$13.00</p>
+
+                    <a href="" class="rating link">
+                      <div class="rating-stars">
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-half"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-empty"
+                          ></use>
+                        </svg>
+                      </div>
+
+                      <span class="rating-quantity">10 reviews</span>
+                    </a>
+                  </div>
+
+                  <div class="hidden-content">
+                    <ul class="sticker-list">
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-organic-product-tag.jpg"
+                          alt="Sticker Healthy Organic Product"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/organic-product-vegetables.JPG"
+                          alt="Sticker Organic Product Vegetables"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-food-broccoli.JPG"
+                          alt="Sticker Organic Broccoli"
+                        />
+                      </li>
+                    </ul>
+                    <p class="product-description">
+                      Simply dummy text of the printing and typesetting
+                      industry. Lorem had ceased to been the industry's standard
+                      dummy text ever since the 1500s, when an unknown printer
+                      took a galley.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="products-item">
+              <article class="product-card">
+                <div class="thumb">
+                  <a href="">
+                    <img
+                      class="image"
+                      src="./images/shop/products/brocolli.png"
+                      alt="Calabrese Broccoli"
+                      width="330"
+                    />
+                  </a>
+
+                  <div class="tags">
+                    <p class="tag">Vegetable</p>
+                  </div>
+
+                  <div class="product-actions">
+                    <button class="item" aria-label="Add to favorites">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <button class="item" aria-label="add to cart">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="content">
+                  <a href="" class="link">
+                    <h3 class="heading">Calabrese Broccoli</h3>
+                  </a>
+                  <div class="meta">
+                    <p class="old-price">$20.00</p>
+                    <p class="price">$13.00</p>
+
+                    <a href="" class="rating link">
+                      <div class="rating-stars">
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-half"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-empty"
+                          ></use>
+                        </svg>
+                      </div>
+
+                      <span class="rating-quantity">10 reviews</span>
+                    </a>
+                  </div>
+
+                  <div class="hidden-content">
+                    <ul class="sticker-list">
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-organic-product-tag.jpg"
+                          alt="Sticker Healthy Organic Product"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/organic-product-vegetables.JPG"
+                          alt="Sticker Organic Product Vegetables"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-food-broccoli.JPG"
+                          alt="Sticker Organic Broccoli"
+                        />
+                      </li>
+                    </ul>
+                    <p class="product-description">
+                      Simply dummy text of the printing and typesetting
+                      industry. Lorem had ceased to been the industry's standard
+                      dummy text ever since the 1500s, when an unknown printer
+                      took a galley.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="products-item">
+              <article class="product-card">
+                <div class="thumb">
+                  <a href="">
+                    <img
+                      class="image"
+                      src="./images/shop/products/brocolli.png"
+                      alt="Calabrese Broccoli"
+                      width="330"
+                    />
+                  </a>
+
+                  <div class="tags">
+                    <p class="tag">Vegetable</p>
+                  </div>
+
+                  <div class="product-actions">
+                    <button class="item" aria-label="Add to favorites">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <button class="item" aria-label="add to cart">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="content">
+                  <a href="" class="link">
+                    <h3 class="heading">Calabrese Broccoli</h3>
+                  </a>
+                  <div class="meta">
+                    <p class="old-price">$20.00</p>
+                    <p class="price">$13.00</p>
+
+                    <a href="" class="rating link">
+                      <div class="rating-stars">
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-half"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-empty"
+                          ></use>
+                        </svg>
+                      </div>
+
+                      <span class="rating-quantity">10 reviews</span>
+                    </a>
+                  </div>
+
+                  <div class="hidden-content">
+                    <ul class="sticker-list">
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-organic-product-tag.jpg"
+                          alt="Sticker Healthy Organic Product"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/organic-product-vegetables.JPG"
+                          alt="Sticker Organic Product Vegetables"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-food-broccoli.JPG"
+                          alt="Sticker Organic Broccoli"
+                        />
+                      </li>
+                    </ul>
+                    <p class="product-description">
+                      Simply dummy text of the printing and typesetting
+                      industry. Lorem had ceased to been the industry's standard
+                      dummy text ever since the 1500s, when an unknown printer
+                      took a galley.
+                    </p>
                   </div>
                 </div>
               </article>
@@ -600,9 +1019,9 @@
           </ul>
 
           <a class="button primary" href="">
-            Load More
-            <span class="icon-thumb">
-              <svg class="icon" width="10" height="9">
+            <span class="button-text">Load More</span>
+            <span class="button-circle">
+              <svg class="icon">
                 <use href="./images/icons/sprite.svg#icon-arrow-right"></use>
               </svg>
             </span>
@@ -620,17 +1039,28 @@
             <div class="thumb">
               <img
                 class="author-image"
-                src="./images/main/testimonial.jpg"
+                src="./images/testimonials/SaraTaylor.jpg"
                 alt="Woman"
                 width="115"
               />
             </div>
-            <div class="rating">
-              <img src="./images/icons/star.svg" alt="star" width="30" />
-              <img src="./images/icons/star.svg" alt="star" width="30" />
-              <img src="./images/icons/star.svg" alt="star" width="30" />
-              <img src="./images/icons/star.svg" alt="star" width="30" />
-              <img src="./images/icons/star.svg" alt="star" width="30" />
+            <!-- <div class="rating"></div> -->
+            <div class="rating-stars">
+              <svg width="25" height="25">
+                <use href="./images/icons/sprite.svg#icon-star-full"></use>
+              </svg>
+              <svg width="25" height="25">
+                <use href="./images/icons/sprite.svg#icon-star-full"></use>
+              </svg>
+              <svg width="25" height="25">
+                <use href="./images/icons/sprite.svg#icon-star-full"></use>
+              </svg>
+              <svg width="25" height="25">
+                <use href="./images/icons/sprite.svg#icon-star-full"></use>
+              </svg>
+              <svg width="25" height="25">
+                <use href="./images/icons/sprite.svg#icon-star-full"></use>
+              </svg>
             </div>
             <p class="text">
               Simply dummy text of the printing and typesetting industry. Lorem
@@ -665,7 +1095,7 @@
       </section>
 
       <!--* Offer -->
-      <section class="section greater-padding offer">
+      <section class="section smaller-padding offer">
         <div class="container">
           <div class="top">
             <div class="heading">
@@ -674,9 +1104,9 @@
             </div>
 
             <a class="button secondary" href="">
-              View All Product
-              <span class="icon-thumb">
-                <svg class="icon" width="10" height="9">
+              <span class="button-text">View All Product</span>
+              <span class="button-circle">
+                <svg class="icon">
                   <use href="./images/icons/sprite.svg#icon-arrow-right"></use>
                 </svg>
               </span>
@@ -687,18 +1117,33 @@
             <li class="products-item">
               <article class="product-card">
                 <div class="thumb">
-                  <div class="tags">
-                    <p class="tag">Vegetable</p>
-                  </div>
                   <a href="">
                     <img
                       class="image"
-                      src="./images/shop/products/broccoli.png"
+                      src="./images/shop/products/brocolli.png"
                       alt="Calabrese Broccoli"
                       width="330"
                     />
                   </a>
+
+                  <div class="tags">
+                    <p class="tag">Vegetable</p>
+                  </div>
+
+                  <div class="product-actions">
+                    <button class="item" aria-label="Add to favorites">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <button class="item" aria-label="add to cart">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
+
                 <div class="content">
                   <a href="" class="link">
                     <h3 class="heading">Calabrese Broccoli</h3>
@@ -706,33 +1151,70 @@
                   <div class="meta">
                     <p class="old-price">$20.00</p>
                     <p class="price">$13.00</p>
-                    <div class="rating">
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                    </div>
+
+                    <a href="" class="rating link">
+                      <div class="rating-stars">
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-half"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-empty"
+                          ></use>
+                        </svg>
+                      </div>
+
+                      <span class="rating-quantity">10 reviews</span>
+                    </a>
+                  </div>
+
+                  <div class="hidden-content">
+                    <ul class="sticker-list">
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-organic-product-tag.jpg"
+                          alt="Sticker Healthy Organic Product"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/organic-product-vegetables.JPG"
+                          alt="Sticker Organic Product Vegetables"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-food-broccoli.JPG"
+                          alt="Sticker Organic Broccoli"
+                        />
+                      </li>
+                    </ul>
+                    <p class="product-description">
+                      Simply dummy text of the printing and typesetting
+                      industry. Lorem had ceased to been the industry's standard
+                      dummy text ever since the 1500s, when an unknown printer
+                      took a galley.
+                    </p>
                   </div>
                 </div>
               </article>
@@ -740,9 +1222,6 @@
             <li class="products-item">
               <article class="product-card">
                 <div class="thumb">
-                  <div class="tags">
-                    <p class="tag">Vegetable</p>
-                  </div>
                   <a href="">
                     <img
                       class="image"
@@ -751,7 +1230,25 @@
                       width="330"
                     />
                   </a>
+
+                  <div class="tags">
+                    <p class="tag">Vegetable</p>
+                  </div>
+
+                  <div class="product-actions">
+                    <button class="item" aria-label="Add to favorites">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <button class="item" aria-label="add to cart">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
+
                 <div class="content">
                   <a href="" class="link">
                     <h3 class="heading">Brown Hazelnut</h3>
@@ -759,33 +1256,70 @@
                   <div class="meta">
                     <p class="old-price">$20.00</p>
                     <p class="price">$12.00</p>
-                    <div class="rating">
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                    </div>
+
+                    <a href="" class="rating link">
+                      <div class="rating-stars">
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                      </div>
+
+                      <span class="rating-quantity">10 reviews</span>
+                    </a>
+                  </div>
+
+                  <div class="hidden-content">
+                    <ul class="sticker-list">
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-organic-product-tag.jpg"
+                          alt="Sticker Healthy Organic Product"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/organic-product-vegetables.JPG"
+                          alt="Sticker Organic Product Vegetables"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-food-broccoli.JPG"
+                          alt="Sticker Organic Broccoli"
+                        />
+                      </li>
+                    </ul>
+                    <p class="product-description">
+                      Simply dummy text of the printing and typesetting
+                      industry. Lorem had ceased to been the industry's standard
+                      dummy text ever since the 1500s, when an unknown printer
+                      took a galley.
+                    </p>
                   </div>
                 </div>
               </article>
@@ -793,9 +1327,6 @@
             <li class="products-item">
               <article class="product-card">
                 <div class="thumb">
-                  <div class="tags">
-                    <p class="tag">Vegetable</p>
-                  </div>
                   <a href="">
                     <img
                       class="image"
@@ -804,7 +1335,25 @@
                       width="330"
                     />
                   </a>
+
+                  <div class="tags">
+                    <p class="tag">Vegetable</p>
+                  </div>
+
+                  <div class="product-actions">
+                    <button class="item" aria-label="Add to favorites">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <button class="item" aria-label="add to cart">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
+
                 <div class="content">
                   <a href="" class="link">
                     <h3 class="heading">Onion</h3>
@@ -812,33 +1361,70 @@
                   <div class="meta">
                     <p class="old-price">$20.00</p>
                     <p class="price">$17.00</p>
-                    <div class="rating">
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                    </div>
+
+                    <a href="" class="rating link">
+                      <div class="rating-stars">
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                      </div>
+
+                      <span class="rating-quantity">10 reviews</span>
+                    </a>
+                  </div>
+
+                  <div class="hidden-content">
+                    <ul class="sticker-list">
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-organic-product-tag.jpg"
+                          alt="Sticker Healthy Organic Product"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/organic-product-vegetables.JPG"
+                          alt="Sticker Organic Product Vegetables"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-food-broccoli.JPG"
+                          alt="Sticker Organic Broccoli"
+                        />
+                      </li>
+                    </ul>
+                    <p class="product-description">
+                      Simply dummy text of the printing and typesetting
+                      industry. Lorem had ceased to been the industry's standard
+                      dummy text ever since the 1500s, when an unknown printer
+                      took a galley.
+                    </p>
                   </div>
                 </div>
               </article>
@@ -846,9 +1432,6 @@
             <li class="products-item">
               <article class="product-card">
                 <div class="thumb">
-                  <div class="tags">
-                    <p class="tag">Vegetable</p>
-                  </div>
                   <a href="">
                     <img
                       class="image"
@@ -857,7 +1440,25 @@
                       width="330"
                     />
                   </a>
+
+                  <div class="tags">
+                    <p class="tag">Vegetable</p>
+                  </div>
+
+                  <div class="product-actions">
+                    <button class="item" aria-label="Add to favorites">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <button class="item" aria-label="add to cart">
+                      <svg class="icon">
+                        <use href="./images/icons/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
+
                 <div class="content">
                   <a href="" class="link">
                     <h3 class="heading">Cabbage</h3>
@@ -865,33 +1466,70 @@
                   <div class="meta">
                     <p class="old-price">$20.00</p>
                     <p class="price">$17.00</p>
-                    <div class="rating">
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                      <img
-                        src="./images/icons/star.svg"
-                        alt="star"
-                        width="20"
-                      />
-                    </div>
+
+                    <a href="" class="rating link">
+                      <div class="rating-stars">
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                        <svg width="20" height="20">
+                          <use
+                            href="./images/icons/sprite.svg#icon-star-full"
+                          ></use>
+                        </svg>
+                      </div>
+
+                      <span class="rating-quantity">10 reviews</span>
+                    </a>
+                  </div>
+
+                  <div class="hidden-content">
+                    <ul class="sticker-list">
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-organic-product-tag.jpg"
+                          alt="Sticker Healthy Organic Product"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/organic-product-vegetables.JPG"
+                          alt="Sticker Organic Product Vegetables"
+                        />
+                      </li>
+                      <li class="item">
+                        <img
+                          class="image"
+                          src="./images/shop/stickers/healthy-food-broccoli.JPG"
+                          alt="Sticker Organic Broccoli"
+                        />
+                      </li>
+                    </ul>
+                    <p class="product-description">
+                      Simply dummy text of the printing and typesetting
+                      industry. Lorem had ceased to been the industry's standard
+                      dummy text ever since the 1500s, when an unknown printer
+                      took a galley.
+                    </p>
                   </div>
                 </div>
               </article>
@@ -946,18 +1584,13 @@
       <section class="section smaller-padding gallery">
         <ul class="gallery-list">
           <li class="item">
-            <img
-              src="./images/main/organic-juice.jpg"
-              alt="Book with juice"
-              width="600"
-            />
+            <img src="./images/main/organic-juice.jpg" alt="Book with juice" />
             <h4 class="heading">Organic Juice</h4>
           </li>
           <li class="item">
             <img
               src="./images/main/organic-food.jpg"
               alt="Chopped vegetables"
-              width="600"
             />
             <h4 class="heading">Organic Food</h4>
           </li>
@@ -965,7 +1598,6 @@
             <img
               src="./images/main/nuts-cookis.jpg"
               alt="Cookis and bars of chocolate"
-              width="600"
             />
             <h4 class="heading">Nuts Cookis</h4>
           </li>
@@ -984,9 +1616,9 @@
               </p>
             </div>
             <a class="button tertiary" href="">
-              More News
-              <span class="icon-thumb">
-                <svg class="icon" width="10" height="9">
+              <span class="button-text">More News</span>
+              <span class="button-circle">
+                <svg class="icon">
                   <use href="./images/icons/sprite.svg#icon-arrow-right"></use>
                 </svg>
               </span>
@@ -1004,12 +1636,10 @@
                   />
                 </div>
 
-                <p class="date">
-                  <time datetime="2022-11-25">
-                    25
-                    <span class="date-month">Nov</span>
-                  </time>
-                </p>
+                <time class="date" datetime="2022-11-25">
+                  <span class="date-number">25</span>
+                  <span class="date-month">Nov</span>
+                </time>
 
                 <div class="content">
                   <p class="author">
@@ -1026,9 +1656,9 @@
                     Lorem Ipsum
                   </p>
                   <a class="button secondary" href="">
-                    Read More
-                    <span class="icon-thumb">
-                      <svg class="icon" width="10" height="9">
+                    <span class="button-text">Read More</span>
+                    <span class="button-circle">
+                      <svg class="icon">
                         <use
                           href="./images/icons/sprite.svg#icon-arrow-right"
                         ></use>
@@ -1048,12 +1678,10 @@
                   />
                 </div>
 
-                <p class="date">
-                  <time datetime="2022-11-25">
-                    25
-                    <span class="date-month">Nov</span>
-                  </time>
-                </p>
+                <time class="date" datetime="2022-11-25">
+                  <span class="date-number">25</span>
+                  <span class="date-month">Nov</span>
+                </time>
 
                 <div class="content">
                   <p class="author">
@@ -1068,9 +1696,9 @@
                     Lorem Ipsum
                   </p>
                   <a class="button secondary" href="">
-                    Read More
-                    <span class="icon-thumb">
-                      <svg class="icon" width="10" height="9">
+                    <span class="button-text">Read More</span>
+                    <span class="button-circle">
+                      <svg class="icon">
                         <use
                           href="./images/icons/sprite.svg#icon-arrow-right"
                         ></use>
@@ -1182,5 +1810,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="/js/index.js" type="module"></script>
   </body>
 </html>
